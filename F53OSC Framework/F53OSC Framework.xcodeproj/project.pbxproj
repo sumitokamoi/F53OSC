@@ -38,7 +38,7 @@
 		980D25B41F99D97A00AC51A9 /* F53OSCMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 980D25951F99D97A00AC51A9 /* F53OSCMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		980D25B51F99D97A00AC51A9 /* NSDate+F53OSCTimeTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 980D25961F99D97A00AC51A9 /* NSDate+F53OSCTimeTag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		980D25B61F99D97A00AC51A9 /* F53OSCTimeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 980D25971F99D97A00AC51A9 /* F53OSCTimeTag.m */; };
-		980D25BD1F99DD6B00AC51A9 /* F53OSC_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 980D25BC1F99DD6B00AC51A9 /* F53OSC_Framework.h */; };
+		980D25BD1F99DD6B00AC51A9 /* F53OSC_Framework.h in Headers */ = {isa = PBXBuildFile; fileRef = 980D25BC1F99DD6B00AC51A9 /* F53OSC_Framework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		980D26211F99E35B00AC51A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980D26201F99E35800AC51A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +172,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980D25BD1F99DD6B00AC51A9 /* F53OSC_Framework.h in Headers */,
 				980D25A81F99D97A00AC51A9 /* F53OSCSocket.h in Headers */,
 				980D259C1F99D97A00AC51A9 /* F53OSCParser.h in Headers */,
 				980D25A31F99D97A00AC51A9 /* F53OSC.h in Headers */,
@@ -188,7 +189,6 @@
 				980D25981F99D97A00AC51A9 /* GCDAsyncSocket.h in Headers */,
 				980D259E1F99D97A00AC51A9 /* F53OSCPacket.h in Headers */,
 				980D25B51F99D97A00AC51A9 /* NSDate+F53OSCTimeTag.h in Headers */,
-				980D25BD1F99DD6B00AC51A9 /* F53OSC_Framework.h in Headers */,
 				980D25B21F99D97A00AC51A9 /* F53OSCProtocols.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
