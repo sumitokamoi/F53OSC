@@ -34,7 +34,7 @@
 
 @protocol F53OSCClientDelegate;
 
-@interface F53OSCClient : NSObject <NSCoding, GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate>
+@interface F53OSCClient : NSObject <NSCoding, F53GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate>
 {
     id <F53OSCPacketDestination, F53OSCClientDelegate> __weak delegate;
     NSString *interface;

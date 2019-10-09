@@ -30,7 +30,7 @@
 
 #define F53_OSC_SERVER_DEBUG 0
 
-@interface F53OSCServer : NSObject <GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate>
+@interface F53OSCServer : NSObject <F53GCDAsyncSocketDelegate, GCDAsyncUdpSocketDelegate>
 {
     id <F53OSCPacketDestination> __weak delegate;
     UInt16 port;

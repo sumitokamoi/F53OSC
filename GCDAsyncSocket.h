@@ -19,7 +19,7 @@
 @class GCDAsyncReadPacket;
 @class GCDAsyncWritePacket;
 @class GCDAsyncSocketPreBuffer;
-@protocol GCDAsyncSocketDelegate;
+@protocol F53GCDAsyncSocketDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -86,28 +86,28 @@ typedef NS_ENUM(NSInteger, GCDAsyncSocketError) {
 **/
 - (instancetype)init;
 - (instancetype)initWithSocketQueue:(nullable dispatch_queue_t)sq;
-- (instancetype)initWithDelegate:(nullable id<GCDAsyncSocketDelegate>)aDelegate delegateQueue:(nullable dispatch_queue_t)dq;
-- (instancetype)initWithDelegate:(nullable id<GCDAsyncSocketDelegate>)aDelegate delegateQueue:(nullable dispatch_queue_t)dq socketQueue:(nullable dispatch_queue_t)sq;
+- (instancetype)initWithDelegate:(nullable id<F53GCDAsyncSocketDelegate>)aDelegate delegateQueue:(nullable dispatch_queue_t)dq;
+- (instancetype)initWithDelegate:(nullable id<F53GCDAsyncSocketDelegate>)aDelegate delegateQueue:(nullable dispatch_queue_t)dq socketQueue:(nullable dispatch_queue_t)sq;
 
 #pragma mark Configuration
 
-@property (atomic, weak, readwrite, nullable) id<GCDAsyncSocketDelegate> delegate;
+@property (atomic, weak, readwrite, nullable) id<F53GCDAsyncSocketDelegate> delegate;
 #if OS_OBJECT_USE_OBJC
 @property (atomic, strong, readwrite, nullable) dispatch_queue_t delegateQueue;
 #else
 @property (atomic, assign, readwrite, nullable) dispatch_queue_t delegateQueue;
 #endif
 
-- (void)getDelegate:(id<GCDAsyncSocketDelegate> __nullable * __nullable)delegatePtr delegateQueue:(dispatch_queue_t __nullable * __nullable)delegateQueuePtr;
-- (void)setDelegate:(nullable id<GCDAsyncSocketDelegate>)delegate delegateQueue:(nullable dispatch_queue_t)delegateQueue;
+- (void)getDelegate:(id<F53GCDAsyncSocketDelegate> __nullable * __nullable)delegatePtr delegateQueue:(dispatch_queue_t __nullable * __nullable)delegateQueuePtr;
+- (void)setDelegate:(nullable id<F53GCDAsyncSocketDelegate>)delegate delegateQueue:(nullable dispatch_queue_t)delegateQueue;
 
 /**
  * If you are setting the delegate to nil within the delegate's dealloc method,
  * you may need to use the synchronous versions below.
 **/
-- (void)synchronouslySetDelegate:(nullable id<GCDAsyncSocketDelegate>)delegate;
+- (void)synchronouslySetDelegate:(nullable id<F53GCDAsyncSocketDelegate>)delegate;
 - (void)synchronouslySetDelegateQueue:(nullable dispatch_queue_t)delegateQueue;
-- (void)synchronouslySetDelegate:(nullable id<GCDAsyncSocketDelegate>)delegate delegateQueue:(nullable dispatch_queue_t)delegateQueue;
+- (void)synchronouslySetDelegate:(nullable id<F53GCDAsyncSocketDelegate>)delegate delegateQueue:(nullable dispatch_queue_t)delegateQueue;
 
 /**
  * By default, both IPv4 and IPv6 are enabled.
@@ -1045,7 +1045,7 @@ typedef NS_ENUM(NSInteger, GCDAsyncSocketError) {
 #pragma mark -
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@protocol GCDAsyncSocketDelegate <NSObject>
+@protocol F53GCDAsyncSocketDelegate <NSObject>
 @optional
 
 /**
